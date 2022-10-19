@@ -1,0 +1,46 @@
+---
+  main:
+  dataset:
+    --hm_radius : '0'
+    --dataset : wildext
+  training:
+    --detection_to_evaluate:
+      - rec_1pf
+      - rec_1pb
+      - rec_1nf
+      - rec_1nb
+      - rec_0f
+      - rec_0b
+      - rec_2f
+      - rec_2b
+      - rec_1o
+    --view_ids:
+      - "0"
+      - "1" 
+      - "2"
+      - "3"
+      - "4"
+      - "5"
+      - "6"
+    --motion_to_evaluate:
+      - flow_0_1f
+      - flow_1_2f
+      - flow_1_0b
+      - flow_2_1b
+    --metric_to_print:
+      - moda_rec_1o
+      - recall_rec_1o
+      - precision_rec_1o
+      - moda_rec_0f
+      - recall_rec_0f
+      - precision_rec_0f
+    --loss_to_print:
+      - flow_loss_rec_1o
+      - flow_loss_rec_0o
+      - flow_loss_rec_2o
+      - flow_loss_consistency
+    
+  loss:
+    --reweigthing_factor: '5'
+
+# train.py -cfg configs/config_flow.yaml -splt 0.9 -dset wildext -rf 5 -lr 0.001 -vid 0 1 2 3 4 5 6 -fi 1 -mtl 40 

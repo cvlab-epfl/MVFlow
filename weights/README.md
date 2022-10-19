@@ -1,0 +1,1 @@
+We provide the weights of our best model trained on Wildtrack ([Wildtrack best weights](https://drive.google.com/file/d/1E3T1MvsSyuSmEYtkgS8bLIfk_acVeKdb/view?usp=sharing)).
